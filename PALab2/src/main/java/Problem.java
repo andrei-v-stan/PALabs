@@ -31,13 +31,11 @@ public class Problem {
         System.out.print("\n");
 
 
-
         int[] S1capacity = S1.getCapacity();
         int[] S2capacity = S2.getCapacity();
         int[] S3capacity = S3.getCapacity();
         int iterator;
         int[][] costs = {{2, 3, 1}, {5, 4, 8}, {5, 6, 8}};
-
 
 
         System.out.print("\n\t\t" + D1.getName() + "\t" + D2.getName() + "\t" + D3.getName() + "\t  Supply");
@@ -60,7 +58,6 @@ public class Problem {
 
 
         System.out.print("\nDemand\t" + D1.getDemand() + "\t" + D2.getDemand() + "\t" + D3.getDemand() + "\n");
-
 
 
         System.out.print("\n");

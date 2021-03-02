@@ -8,9 +8,7 @@ abstract class Source {
     private int supply;
     private String type;
 
-    /**
-     * <p>Constructor which determines the source type.</p>
-     */
+
     public Source() {
         this.type = getType();
     }

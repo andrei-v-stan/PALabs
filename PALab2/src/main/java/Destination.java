@@ -5,11 +5,7 @@ class Destination {
     private String name;
     private int demand;
 
-    /**
-     * <p>Constructer which determines a destination name and destination demand.</p>
-     * @param name destination name;
-     * @param demand destination demand;
-     */
+
     public Destination(String name, int demand) {
         this.name = name;
         this.demand = demand;

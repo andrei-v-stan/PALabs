@@ -4,83 +4,78 @@ import java.util.Arrays;
 
 class Solution {
 
-        private ArrayList<Source> sources;
-        private ArrayList<Destination> destinations;
-        private int[][] costs;
-        int cost;
-        int iterator;
+    private ArrayList<Source> sources;
+    private ArrayList<Destination> destinations;
+    private int[][] costs;
+    int cost;
+    int iterator;
 
 
-        public ArrayList<Source> getSources() {
-            return sources;
-        }
+    public Solution(ArrayList<Source> sources, ArrayList<Destination> destinations, int[][] costs) {
+        this.sources = sources;
+        this.destinations = destinations;
+        this.costs = costs;
+    }
 
-        public void setSources(ArrayList<Source> sources) {
-            this.sources = sources;
-        }
 
-        public ArrayList<Destination> getDestinations() {
-            return destinations;
-        }
+    public ArrayList<Source> getSources() {
+        return sources;
+    }
 
-        public void setDestinations(ArrayList<Destination> destinations) {
-            this.destinations = destinations;
-        }
+    public void setSources(ArrayList<Source> sources) {
+        this.sources = sources;
+    }
 
-        public int[][] getCosts() {
-            return costs;
-        }
+    public ArrayList<Destination> getDestinations() {
+        return destinations;
+    }
 
-        public void setCosts(int[][] costs) {
-            this.costs = costs;
-        }
+    public void setDestinations(ArrayList<Destination> destinations) {
+        this.destinations = destinations;
+    }
 
-    /**
-     * <p>Constructor that determines the sources, destinations and costs given</p>
-     * @param sources array list (vector) of the given sources;
-     * @param destinations array list (vector) of the given destinations;
-     * @param costs matrix of the costs to be calculated.
-     */
-        public Solution(ArrayList<Source> sources, ArrayList<Destination> destinations, int[][] costs) {
-            this.sources = sources;
-            this.destinations = destinations;
-            this.costs = costs;
-        }
+    public int[][] getCosts() {
+        return costs;
+    }
 
-        @Override
-        public String toString() {
-            return "Problem{" +
-                    "sources=" + sources +
-                    ", destinations=" + destinations +
-                    ", costs=" + Arrays.toString(costs) +
-                    '}';
-        }
+    public void setCosts(int[][] costs) {
+        this.costs = costs;
+    }
 
+
+    @Override
+    public String toString() {
+        return "Problem{" +
+                "sources=" + sources +
+                ", destinations=" + destinations +
+                ", costs=" + Arrays.toString(costs) +
+                '}';
+    }
 
 
     /**
      * <p>This method determines the entire transport cost of a destination to all the sources.</p>
+     *
      * @param destination
      * @return
      */
-    public int getDestinationCost(Destination destination){
+    public int getDestinationCost(Destination destination) {
 
-        if(!destinations.contains(destination)){
-            return  0;
-        }
-        else{
+        if (!destinations.contains(destination)) {
+            return 0;
+        } else {
             cost = 0;
-            for(iterator=0;iterator<sources.size();iterator++)
-            {
-                cost = cost + destination.getDemand()*costs[iterator][destinations.indexOf(destination)];
+            for (iterator = 0; iterator < sources.size(); iterator++) {
+                cost = cost + destination.getDemand() * costs[iterator][destinations.indexOf(destination)];
             }
-            return  cost;
+            return cost;
         }
     }
 
 
     /**
      * <p>This method determines and prints the transport cost of a source to a destination.</p>
+     *
      * @param source
      * @param destination
      */

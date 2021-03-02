@@ -1,14 +1,14 @@
-Main.java
- Main
+Warehouse.java
+ Warehouse
 Source.java
  Source
 Destination.java
  Destination
-Problem.java
- Problem
 Factory.java
  Factory
+Main.java
+ Main
+Problem.java
+ Problem
 Solution.java
  Solution
-Warehouse.java
- Warehouse
