@@ -1,30 +1,36 @@
-import java.util.LinkedList;
+
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        Maps map = new Maps();
+        List<String> elements = new ArrayList<String>(map.schoolsHashMap.keySet());
 
-            LinkedList<String> listL = new LinkedList<String>();
+        Iterator<String> itr = map.schoolsHashMap.keySet().iterator();
+        Collections.reverse(elements);
 
-            listL.addFirst("H0");
-            listL.add("H1");
-            listL.add("H3");
-            listL.add("H4");
-            listL.addLast("H2");
-            listL.add(2, "H12");
+        System.out.println("\nstudents preferences");
+        for (Map.Entry element : map.studentsHashMap.entrySet()) {
+            System.out.println(element.getKey() + "" + element.getValue());
+        }
 
-            System.out.println(listL);
+        System.out.println("\nschools preferences");
+        for (String index : elements) {
+            System.out.println(index + "" + map.schoolsHashMap.get(index));
+        }
 
-            listL.remove("H12");
-            listL.remove(3);
-            listL.removeFirst();
-            listL.removeLast();
+        System.out.println("\n");
 
-            System.out.println(listL);
+        new Fakes();
 
+        System.out.println("\n");
 
+        Problem prob = new Problem();
+        prob.printProperSituations();
 
     }
 
 }
+

@@ -1,6 +1,15 @@
 Student.java
  Student
+ Student$1
 School.java
  School
+Fakes.java
+ Fakes
+Maps.java
+ Maps
 Main.java
  Main
+Problem.java
+ Problem
+Solution.java
+ Solution
