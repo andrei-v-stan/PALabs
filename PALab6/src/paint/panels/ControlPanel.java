@@ -86,7 +86,7 @@ public class ControlPanel extends JPanel {
             JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
             jfc.setDialogTitle("Select an image");
             jfc.setAcceptAllFileFilterUsed(false);
-            FileNameExtensionFilter filter = new FileNameExtensionFilter("Select an image", "png", "img");
+            FileNameExtensionFilter filter = new FileNameExtensionFilter("Select an image", "jpg", "png", "jpeg", "gif");
             jfc.addChoosableFileFilter(filter);
             int returnValue = jfc.showOpenDialog(null);
             if (returnValue == JFileChooser.APPROVE_OPTION) {

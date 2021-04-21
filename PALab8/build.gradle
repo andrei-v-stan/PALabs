@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    compile files('./ojdbc8.jar')
+    compile files('./mchange-commons-java-0.2.19.jar')
+    compile files('./c3p0-oracle-thin-extras-0.9.5.5.jar')
+    compile files('./c3p0-0.9.5.5.jar')
+}
+
+test {
+    useJUnitPlatform()
+}
