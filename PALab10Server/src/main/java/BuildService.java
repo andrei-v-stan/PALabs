@@ -1,0 +1,2 @@
+public interface BuildService<T> {
+}
